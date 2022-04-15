@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="https://kit.fontawesome.com/36c6f4e18d.js" crossorigin="anonymous"></script>
+    <title>Notes App</title>
+</head>
+
+<body>
+
+    <!-- Search Bar -->
+
+
+    <!-- Main section -->
+
+    <section class="parent-section">
+        <section class="add-area">
+            <div class="search-bar">
+                <input type="search" placeholder="Search here.">
+            </div>
+            <div class="add-notes">
+                <h2>Add your Notes</h2>
+                <textarea name="Add notes" placeholder="Type your note here..." id="addTxt" cols="30" rows="10"></textarea>
+                <button class="create-note-btn" id="addBtn">Create</button>
+            </div>
+        </section>
+
+        <!-- -------------- NOTES SECTION ---------------- -->
+        <section class="all-notes">
+            <div class="saved-notes" id="saveNotes">
+                <div class="card">
+                    <div class="card-info">
+                        <div class="card-title">
+                            <h5>Card title</h5>
+                        </div>
+                        <hr />
+                        <p id="main-text">
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                    <button class="deleteBtn" id="dltBtn">Delete Note</button>
+                    <button class="copy-btn" id="copyBtn">
+                        <i class="fa-solid fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        const textarea = document.querySelector("textarea");
+        textarea.addEventListener("keyup", (e) => {
+            textarea.style.height = "63px";
+            let scHeight = e.target.scrollHeight;
+            textarea.style.height = `${scHeight}px`;
+        });
+    </script>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

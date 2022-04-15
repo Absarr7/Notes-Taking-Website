@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.parent-section {
+    display: flex;
+}
+
+.add-area {
+    position: relative;
+    background: #4890D8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 30vw;
+}
+
+.add-notes {
+    width: 365px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 25px 25px 30px;
+}
+
+.add-notes h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    color: #4671ea;
+    /* - bcz of bootstrap - */
+    overflow: hidden;
+}
+
+.add-notes textarea {
+    width: 100%;
+    height: 59px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    border-color: #bfbfbf;
+}
+
+textarea:is(:focus,
+ :valid) {
+    border-color: #4671ea;
+    padding: 14px;
+    border-width: 2px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0px;
+}
+
+.create-note-btn {
+    padding: 7px 20px;
+    border: 2px solid rgb(70, 113, 234);
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 400ms ease;
+}
+
+.create-note-btn:hover {
+    background: #4671ea;
+    color: white;
+}
+
+
+/* --------- SHOW NOTES AREA ----------- */
+
+
+/* CARD STYLING */
+
+.all-notes {
+    background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 1) 7.1%, rgba(240, 246, 238, 1) 67.4%);
+    width: 70vw;
+}
+
+.saved-notes {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    width: 18rem;
+    height: 16rem;
+    background: transparent;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 4px;
+    position: relative;
+    /* padding-top: 2rem; */
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.card-info h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    overflow: hidden;
+    padding: 0 0 7px 13px;
+}
+
+.card-info p {
+    font-size: 1rem;
+    padding: 14px 9px 0 9px;
+}
+
+.deleteBtn {
+    font-size: 1rem;
+    text-decoration: none;
+    position: absolute;
+    top: 83%;
+    left: 4%;
+    outline: none;
+    border: none;
+    background: #4890D8;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.deleteBtn:hover {
+    background: #4671ea;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 83%;
+    left: 83%;
+    outline: none;
+    border: none;
+    background: #4890D8;
+    color: white;
+    padding: 8px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn i {
+    font-size: 20px;
+}
+
+.copy-btn:hover {
+    background: #4671ea;
+}
+
+.search-bar {
+    position: absolute;
+    top: 2%;
+    left: 7%;
+}
+
+.search-bar input {
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 8px 13px;
+}
