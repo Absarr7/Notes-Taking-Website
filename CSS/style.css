@@ -34,13 +34,11 @@
     font-weight: 700;
     font-size: 28px;
     color: #4671ea;
-    /* - bcz of bootstrap - */
-    overflow: hidden;
 }
 
 .add-notes textarea {
     width: 100%;
-    height: 59px;
+    height: 50px;
     padding: 15px;
     border-radius: 5px;
     margin-top: 20px;
@@ -98,12 +96,13 @@ textarea::-webkit-scrollbar {
     width: 18rem;
     height: 16rem;
     background: transparent;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 4px;
     position: relative;
-    /* padding-top: 2rem; */
+}
+
+.card::-webkit-scrollbar {
+    width: 0px;
 }
 
 .card-info {
@@ -128,8 +127,8 @@ textarea::-webkit-scrollbar {
     font-size: 1rem;
     text-decoration: none;
     position: absolute;
-    top: 83%;
-    left: 4%;
+    top: 10%;
+    left: 57%;
     outline: none;
     border: none;
     background: #4890D8;
@@ -143,39 +142,35 @@ textarea::-webkit-scrollbar {
     background: #4671ea;
 }
 
-.copy-btn {
-    position: absolute;
-    top: 83%;
-    left: 83%;
-    outline: none;
-    border: none;
-    background: #4890D8;
-    color: white;
-    padding: 8px 9px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/* Making the Site Responsive */
+
+@media screen and (max-width: 1024px) {
+    .parent-section {
+        flex-direction: column;
+    }
+    .add-area {
+        width: 100vw;
+        height: 50vh;
+    }
+    .all-notes {
+        width: 100vw;
+    }
+    .add-notes {
+        width: 500px;
+        height: 500px;
+    }
 }
 
-.copy-btn i {
-    font-size: 20px;
-}
-
-.copy-btn:hover {
-    background: #4671ea;
-}
-
-.search-bar {
-    position: absolute;
-    top: 2%;
-    left: 7%;
-}
-
-.search-bar input {
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    padding: 8px 13px;
+@media screen and (max-width: 420px) {
+    .add-notes {
+        height: 230px;
+        width: 325px;
+    }
+    .saved-notes {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        margin-left: 2.7rem;
+    }
 }
